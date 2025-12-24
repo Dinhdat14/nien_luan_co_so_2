@@ -28,7 +28,6 @@ def Mahoa(images):
 encodeListKnow = Mahoa(images)  # hình ảnh có trong list ds thì in ra mã hóa
 print("MÃ HÓA THÀNH CÔNG")
 
-
 def thamdu(name):
     with open("thamdu.csv", 'r+') as f:         # mở file thamdu.csv ở trạng thái đọc và ghi
         myDatalist = f.readlines()
@@ -41,7 +40,6 @@ def thamdu(name):
             now = datetime.datetime.now()  # tra ve ngay gio 2025-11-06 20:29:58.681296
             dtstring = now.strftime("%H:%M:%S")
             f.writelines(f"\n{name},{dtstring}")
-
 
 # Khởi động Webcam
 cap = cv2.VideoCapture(0)
