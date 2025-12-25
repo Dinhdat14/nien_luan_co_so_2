@@ -14,7 +14,7 @@ for i in myList:
     images.append(curimg)
     className.append(os.path.splitext(i)[0]) #tach filename va phan mo rong
 # print(className)
-# print(len(images))
+print("so lượng ảnh", len(images), len(className[0]))
 
 # Mã hóa hình ảnh khuôn mặt
 def Mahoa(images):
@@ -72,7 +72,7 @@ while True:
         cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
         cv2.putText(frame, name, (x2, y2), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 0), 2)
         cv2.putText(frame, f"faceDis: {faceDis[matchIndex]:.2f}", (x1, y1 - 10), cv2.FONT_HERSHEY_COMPLEX, 0.5, (0, 255, 0), 2)
-    cv2.imshow("Mô hình Nhận diện khuôn mặt", frame)
+    cv2.imshow("Face Recognition", frame)
     if cv2.waitKey(1) == ord('q'):
         break
 cap.release()  # giai phong camera
